@@ -282,17 +282,22 @@ header h1 {
   background-color: #f4f5f9;
   padding: 7% 0;
 }
+#caseStudy .splitter {
+  margin-bottom: 8%;
+}
 .textSliderContainer {
   background-color: #ffffff;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1;
 }
 #caseStudy .square {
-  width: 127px;
-  height: 127px;
+  width: 90px;
+  height: 90px;
   background-color: #e74c3c;
   transform: rotate(45deg);
   box-shadow: 0 0 0 .2px rgba(0, 0, 0, 1);
   margin-top: 3%;
+  padding: 28px;
 }
 #caseStudy .square img {
   transform: rotate(-45deg);
@@ -303,18 +308,18 @@ header h1 {
   font-size: 18px;
   font-weight: bold;
   letter-spacing: 1.35px;
-  margin-top: 95px;
+  margin-top: 85px;
 }
 #caseStudy hr {
   width: 44px;
   background-color: #6a6a6a;
-  margin: 3% auto;
+  margin: 3.3% auto;
 }
 .textSliderContainer p {
   color: #999999;
   font-family: "Source Sans Pro";
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 400;
   line-height: 24px;
   letter-spacing: 1.05px;
   margin-bottom: 5%;
@@ -328,13 +333,13 @@ header h1 {
   font-size: 12px;
   font-weight: 400;
   letter-spacing: 0.14px;
-  margin-top: 3%;
+  margin-top: 4%;
 }
 .textSliderContainer .btn-orange:hover {
   box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.25);
 }
 .textSliderContainer .carousel-indicators {
-  margin-bottom: 6%;
+  margin-bottom: 5%;
 }
 .textSliderContainer .carousel-indicators li {
   width: 12px;
@@ -346,6 +351,11 @@ header h1 {
   background-color: #e74c3c;
 }
 .textSliderContainer .carousel-item {
-  padding: 16% 6%;
+  padding: 12.6% 6.5% 16%;
+}
+.caseStudyImage {
+  top: -6.5%;
+  right: 0;
+  z-index: 0;
 }
 /*------------------------*/
