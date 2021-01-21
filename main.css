@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,600&display=swap');
 /*---------common---------*/
 .textColorBlack {
   color: #6a6a6a;
@@ -46,6 +46,7 @@ h2 {
   font-size: 14px;
   font-weight: 400;
   line-height: 29px;
+  margin-bottom: 1%;
 }
 .blockHeader .splitter{
   margin-bottom: 4.5%;
@@ -359,3 +360,369 @@ header h1 {
   z-index: 0;
 }
 /*------------------------*/
+
+/*----checkout stats-----*/
+#checkoutStats {
+  background-image: url(img/background/checkout_stats_foreground.png), url(img/background/checkout_stats_bg.png);
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover;
+  padding: 7% 0 7%;
+}
+#checkoutStats .row {
+  margin-top: 7%;
+}
+#checkoutStats .circle {
+  width: 111px;
+  height: 111px;
+  background-color: transparent;
+  border: 1px solid white;
+  padding: 40px;
+  padding-top: 40px;
+}
+#checkoutStats img {
+  margin: 0 auto;
+}
+#checkoutStats p{
+  color: #f4f5f9;
+  font-family: "Source Sans Pro";
+}
+#checkoutStats .number {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-top: 15%;
+}
+#checkoutStats .text {
+  font-size: 18px;
+  letter-spacing: 0.9px;
+}
+/*------------------------*/
+
+/*---------pricing--------*/
+#pricing {
+  margin: 8% 0;
+}
+.pricingCard {
+  padding: 0 2%;  
+}
+.pricingCard:hover .pricingCardHead, 
+.pricingCard:hover .pricingCardBody button {
+  background-color: #e74c3c;
+}
+.pricingCard:hover .pricingCardHead span {
+  color: #e74c3c;
+}
+.pricingCardHead {
+  background-color: #999999;
+  padding-top: 11%;
+  padding-bottom: 33%;
+  transition: background-color .15s ease-in-out;
+}
+.pricingCardHead h3 {
+  color: #ffffff;
+  font-family: "Open Sans";
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1.8px;
+}
+.pricingCard .circle {
+  width: 154px;
+  height: 153px;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 11px rgba(256, 256, 256, 0.25);
+  top: 240%;
+  left: 29.5%;
+}
+.pricingCardHead .circle p {
+  color: #999999;
+  font-family: "Source Sans Pro";
+  line-height: 21.95px;
+  margin-top: 20%;
+}
+.pricingCardHead .circle p span {
+  color: inherit;
+  font-size: 40px;
+  font-weight: 700;
+  transition: color .15s ease-in-out;
+}
+.pricingCardHead .circle p span i {
+  font-size: 33px;
+}
+.pricingCardBody {
+  background-color: #f4f5f9;
+  padding-top: 33%;
+  padding-bottom: 13%;
+}
+.pricingCardBody li {
+  list-style: none;
+  color: #999999;
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 40px;
+}
+.pricingCardBody button {
+  width: 145px;
+  height: 46px;
+  font-family: "Open Sans";
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.14px;
+  border: unset;
+  background-color: #999999;
+  box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.25);
+  margin-top: 7%;
+}
+/*------------------------*/
+
+/*----------team----------*/
+#team {
+  background-image: url(img/background/team_curve_bg.png),
+                    url(img/background/team_foreground.png),
+                    url(img/background/team_bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 7% 0;
+  height: 550px;
+}
+#team .blockHeader h2 {
+  color: #ffffff;
+}
+#team .blockHeader p {
+  color: #f4f5f9;
+}
+.worker {
+  border: 3px solid #e74c3c;
+  border-radius: 100px;
+  transition: transform .25s ease-in-out,
+              box-shadow .25s ease-in-out; 
+}
+.workerContainer:hover .worker {
+  transform: scale(140%);
+  box-shadow: 0 5px 13px 2px #000000;
+}
+.workerContainer {
+  
+}
+.workerName {
+  transition: opacity .5s ease-in-out 1s;
+}
+.workerContainer:hover .workerName h3,
+.workerContainer:hover .workerName p{
+  opacity: 1;
+}
+.workerName h3 {
+  color: #e74c3c;
+  font-family: "Open Sans";
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1.8px;
+  margin-top: 20px;
+  opacity: 0;
+  transition: opacity .3s ease-in-out .3s;
+}
+.workerName p {
+  color: #ffffff;
+  font-family: "Source Sans Pro";
+  font-weight: bold;
+  line-height: 23.99px;
+  letter-spacing: 1.4px;
+  opacity: 0;
+  transition: opacity .3s ease-in-out .4s;
+}
+.workerCover {
+  width: 54px;
+  height: 53px;
+  background-color: #e74c3c;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  border-radius: 100%;
+  opacity: 0;
+  transition: opacity .25s ease-in-out,
+              transform .25s ease-in-out;
+}
+.workerContainer:hover .workerCover {
+  opacity: 0.5;
+  transform: scale(140%);
+}
+.verticalLine {
+  width: 2px;
+  height: 0px;
+  border-left: 1px solid #ffffff;
+  margin: 0 auto;
+  transition: height .4s ease-in-out .1s;
+}
+.workerContainer:hover .verticalLine {
+  height: 60px;
+}
+/*------------------------*/
+
+/*---------clients--------*/
+#clients {
+  background-color: #f4f5f9;
+  padding: 8.5% 0 0;
+}
+.logoContainer {
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px rgba(31, 31, 31, 0.09);
+  transition: background-color .1s ease-in;
+  line-height: 460%
+}
+.logoContainer:hover {
+  background-color: #e74c3c;
+}
+.logoContainer img {
+  opacity: 0.31;
+  transition: opacity .1s ease-in;
+  
+}
+.logoContainer:hover img {
+  opacity: 1;
+}
+#clients hr {
+  margin-top: 7%;
+  margin-bottom: 0;
+}
+/*------------------------*/
+
+/*----------blog----------*/
+#blog {
+  padding: 7% 0 0;
+  background-color: #f4f5f9;
+}
+.blogDescriptionContainer {
+  background-color: #e74e3e;
+  color: #ffffff;
+  position: relative;
+/*   padding: 4% 3% 2% !important; */
+}
+.firstRowBlog .blogDescriptionContainer::before {
+  content: '';
+  position: absolute;
+  border-top: 60px solid transparent;
+  border-left: 60px solid transparent;
+  border-right: 50px solid #e74e3e;
+  border-bottom: 60px solid transparent;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -22%;
+}
+.secondRowBlog .blogDescriptionContainer::before {
+  content: '';
+  position: absolute;
+  border-top: 60px solid transparent;
+  border-left: 50px solid #e74e3e;
+  border-right: 60px solid transparent;
+  border-bottom: 60px solid transparent;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -22%;
+  z-index: 1;
+}
+.blogDescriptionContainer p {
+  font-family: "Open Sans";
+}
+.blogTag {
+  font-size: 12px;
+  letter-spacing: 0.7px;
+}
+.blogDescriptionContainer h3 {
+  font-family: "Source Sans Pro";
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+}
+.blogDescriptionContainer hr {
+  width: 44px;
+  background-color: #ffffff;
+  border: 2px solid #fff;
+  margin-left: 0;
+}
+.blogDescription {
+  line-height: 30px;
+  font-size: 14px;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  z-index: 2;
+}
+.blogDescriptionContainer a {
+  color: #ffffff;
+  font-family: "Open Sans";
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  font-style: italic;
+  text-decoration: unset;
+}
+.blogDescriptionContainer a i {
+  font-size: 15px;
+}
+.blogImg {
+  width: 100%;
+  height: 100%;
+}
+/*------------------------*/
+
+/*---------contact--------*/
+#contact {
+  background-color: #f4f5f9;
+  padding: 9% 0 7%;
+}
+.contacts, .contactForm {
+  margin: 0 0%;
+  background-color: #fff;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+.contacts {
+  padding: 18% 16%;
+  height: 100%;
+}
+.contactBlock {
+  margin-top: -20%;
+}
+.contactBlock h3 {
+  color: #e74e3e;
+  font-family: "Source Sans Pro";
+  font-size: 24px;
+  font-weight: 600;
+}
+.contacts p {
+  color: #999999;
+  font-family: "Open Sans";
+  font-size: 18px;
+  line-height: 24px;
+}
+.contactForm {
+  padding: 12% 14%;
+}
+.contactForm label {
+  color: #999999;
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24px;
+  margin: 0;
+  position: relative;
+  top: -55%;
+  transition: top .1s ease-in-out;
+}
+.contactForm input:focus + .inputLabel {
+  top: -100%;
+}
+.contactForm input, .contactForm textarea {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-color: rgba(99, 99, 99, .25);
+  border-radius: 0;
+}
+.contactForm input:focus,
+.contactForm textarea:focus {
+  box-shadow: none;
+  border-color: #e74e3e; 
+}
+/*------------------------*/
+
