@@ -1,16 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,600&display=swap');
 /*---------common---------*/
-.textColorBlack {
-  color: #6a6a6a;
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
-.textColorWhite {
-  color: #f4f5f9;
+body {
+  overflow-x: hidden;
 }
-.textColorOrange {
-  color: #f4f5f9;
-}
-.btn-orange {
+.btnOrange {
   border: 1px solid white;
   color: white;
   font-size: 14px;
@@ -19,7 +17,7 @@
   height: 56px;
   letter-spacing: -0.24px;
 }
-.btn-orange:hover {
+.btnOrange:hover {
   color: white;
   border-color: #e74c3c;
   background-color: #e74c3c;
@@ -55,18 +53,19 @@ h2 {
 
 /*---------header---------*/
 header {
-  overflow: hidden; 
+/*   overflow: hidden;  */
   font-family: "Open Sans";
   color: white;
+  background-color: #202020;
+  padding-bottom: 15%;
 }
-
 header h1 {
-  font-size: 72px;
+  font-size: 50px;
   font-weight: 700;
   letter-spacing: 7.2px;
 }
 .headerText {
-  margin-top: 13%;
+  margin-top: 13%; 
 }
 #slogan {
   font-weight: 400;
@@ -80,8 +79,15 @@ header h1 {
 }
 .nav-link:hover {
   color: #e74c3c;
-/*   font-weight: 700; */ /*!!!!!!!!!!!!!!!!!!*/
   border-bottom: 1px solid #e74c3c;
+}
+.testForeground {
+  width: 100%;
+  z-index: 0;
+  background-color: black;
+  opacity: 0.7;
+  padding: 30%;
+  position: absolute;
 }
 .carousel-control_style {
   background-color: #ffffff;
@@ -92,20 +98,76 @@ header h1 {
   color: #303030;
   font-size: 23px; 
 }
+#headerCarousel .carousel-inner::before {
+  content: '';
+  width: 0;
+	height: 0;
+	border-top: 160px solid transparent;
+	border-left: 1000px solid white;
+	border-bottom: 50px solid transparent;
+  position: absolute;
+  bottom: -10%;
+  z-index: 1;
+}
+#headerCarousel .carousel-inner::after {
+  content: '';
+  width: 0;
+	height: 0;
+	border-top: 160px solid transparent;
+	border-right: 1000px solid white;
+	border-bottom: 50px solid transparent;
+  position: absolute;
+  right: 0;
+  bottom: -10%;
+  z-index: 1;
+}
 .carousel-control_style:hover {
   background-color: #e74c3c;
 }
 .carousel-control_style:focus {
   background-color: #e74c3c;
 }
+header .btnOrange {
+  width: 100%;
+}
 .btnDown {
-  top: 125px;
+  top: 50%;
   box-shadow: 0 0 0 0px rgba(256, 256, 256, 0.25);
   transition: box-shadow .15s ease-out;
+  z-index: 1;
 }
 .btnDown:hover {
   box-shadow: 0 0 0 5px rgba(256, 256, 256, 0.25), 0 0 0 .1px rgba(0, 0, 0, 1);
 }
+
+/*****media*****/
+@media (min-width: 576px) {
+  header {
+    background-color: #202020;
+  }
+  header h1 {
+     font-size: 72px;
+  }
+}
+@media (min-width: 768px) {
+  header {
+    background-color: #202020;
+  }
+  header h1 {
+     font-size: 72px;
+  }
+  header .btnOrange {
+    width: 225px;
+    height: 56px;
+  }
+  #headerCarousel img {
+    width: 100%;
+    height: 750px;
+  }
+  
+}
+
+/***************/
 /*------------------------*/
 
 /*-------advantages-------*/
@@ -214,6 +276,19 @@ header h1 {
   margin-left: 39%;
   box-shadow: 0 0 0 5px rgba(256, 256, 256, 0.25), 0 0 0 1px rgba(0, 0, 0, 1);
 }
+
+/*****media*****/
+@media (min-width: 576px) {
+  #services {
+    background-image: url(img/background/services_left_bg.png);
+  }
+}
+@media (min-width: 992px) {
+   #services {
+    background-image: url(img/background/our_services_bg.png);
+  }
+}
+/***************/
 /*------------------------*/
 
 /*--------portfolio-------*/
@@ -251,7 +326,7 @@ header h1 {
   background-size: contain;
   background-position-y: bottom;
   opacity: 0.8;
-  top: 5%;
+  top: -100%;
   transition: top .2s ease-in-out;
 }
 .imageCover:hover {
@@ -268,7 +343,7 @@ header h1 {
 }
 .imageCover a {
   color: #ffffff;
-  font-size: 24px;
+  font-size: 20px;
   letter-spacing: 1.2px;
   text-decoration: unset;
 }
@@ -276,6 +351,19 @@ header h1 {
   color: #ffffff !important;
   letter-spacing: 0.7px;
 }
+
+/*****media*****/
+@media (min-width: 992px) {
+    .imageCover {
+    top: 5%;
+    transition: top .2s ease-in-out;
+  }
+  .imageCover a {
+    font-size: 24px;
+  }
+}
+/***************/
+
 /*------------------------*/
 
 /*-------case study-------*/
@@ -325,7 +413,7 @@ header h1 {
   letter-spacing: 1.05px;
   margin-bottom: 5%;
 }
-.textSliderContainer .btn-orange {
+.textSliderContainer .btnOrange {
   width: 145px;
   height: 46px;
   background-color: #e74c3c;
@@ -336,7 +424,7 @@ header h1 {
   letter-spacing: 0.14px;
   margin-top: 4%;
 }
-.textSliderContainer .btn-orange:hover {
+.textSliderContainer .btnOrange:hover {
   box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.25);
 }
 .textSliderContainer .carousel-indicators {
@@ -358,7 +446,22 @@ header h1 {
   top: -6.5%;
   right: 0;
   z-index: 0;
+  overflow: hidden;
+  padding: 0;
 }
+
+/*****media*****/
+@media (min-width: 576px) {
+  #caseStudy {
+    padding: 10% 0 30%;
+  }
+}
+@media (min-width: 992px) {
+  #caseStudy {
+    padding: 7% 0 11%;
+  }
+}
+/***************/
 /*------------------------*/
 
 /*----checkout stats-----*/
@@ -366,7 +469,7 @@ header h1 {
   background-image: url(img/background/checkout_stats_foreground.png), url(img/background/checkout_stats_bg.png);
   background-repeat: no-repeat, no-repeat;
   background-size: cover;
-  padding: 7% 0 7%;
+  padding: 7% 0 10%;
 }
 #checkoutStats .row {
   margin-top: 7%;
@@ -390,12 +493,13 @@ header h1 {
   font-size: 30px;
   font-weight: 700;
   letter-spacing: 1.5px;
-  margin-top: 15%;
+  margin-top: 7%;
 }
 #checkoutStats .text {
   font-size: 18px;
   letter-spacing: 0.9px;
 }
+
 /*------------------------*/
 
 /*---------pricing--------*/
@@ -415,7 +519,7 @@ header h1 {
 .pricingCardHead {
   background-color: #999999;
   padding-top: 11%;
-  padding-bottom: 33%;
+  padding-bottom: 0%;
   transition: background-color .15s ease-in-out;
 }
 .pricingCardHead h3 {
@@ -430,8 +534,7 @@ header h1 {
   height: 153px;
   background-color: #ffffff;
   box-shadow: 0 0 0 11px rgba(256, 256, 256, 0.25);
-  top: 240%;
-  left: 29.5%;
+  top: 40%;
 }
 .pricingCardHead .circle p {
   color: #999999;
@@ -482,7 +585,7 @@ header h1 {
                     url(img/background/team_bg.png);
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 7% 0;
+  padding: 7% 0 30%;
   height: 550px;
 }
 #team .blockHeader h2 {
@@ -501,8 +604,20 @@ header h1 {
   transform: scale(140%);
   box-shadow: 0 5px 13px 2px #000000;
 }
-.workerContainer {
-  
+.worker1 {
+  top: 50px;
+}
+.worker2 {
+  top: -15%;
+}
+.worker3 {
+  top: -20%;
+}
+.worker4 {
+  top: 0%;
+}
+.worker5 {
+  top: -20%;
 }
 .workerName {
   transition: opacity .5s ease-in-out 1s;
@@ -597,7 +712,9 @@ header h1 {
   background-color: #e74e3e;
   color: #ffffff;
   position: relative;
-/*   padding: 4% 3% 2% !important; */
+}
+.blogDescriptionContainer .row {
+  padding: 20% 12% 10%;
 }
 .firstRowBlog .blogDescriptionContainer::before {
   content: '';
@@ -762,7 +879,7 @@ header h1 {
   color: #ffffff;
   font-size: 18px;
 }
-#promo .btn-orange {
+#promo .btnOrange {
   width: 225px;
   height: 56px;
   border: none;
@@ -771,6 +888,9 @@ header h1 {
   font-family: "Open Sans";
   letter-spacing: 0.12px;
   margin-top: 15%;
+}
+#promo .btnOrange:hover {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 1);
 }
 /*------------------------*/
 
@@ -809,6 +929,10 @@ footer .btnUp {
   background-color: #e74c3c;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
   bottom: 22px;
+  left: 48%;  
+}
+.btnUp:hover {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.50);
 }
 .btnUp a {
   color: #fff;
@@ -817,6 +941,14 @@ footer .btnUp {
 .btnUp a:hover {
   color: white;
   box-shadow: none;
+}
+/*****media*****/
+@media (min-width: 768px) {
+  .btnUp {
+    left: 0;
+    
+  }
+/**************/
 }
 /*------------------------*/
 
