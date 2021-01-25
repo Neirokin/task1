@@ -8,9 +8,6 @@ html {
 body {
   overflow-x: hidden;
 }
-button {
-  box-shadow: none !impotant;
-}
 .btnOrange {
   border: 1px solid white;
   color: white;
@@ -56,7 +53,6 @@ h2 {
 
 /*---------header---------*/
 header {
-/*   overflow: hidden;  */
   font-family: "Open Sans";
   color: white;
   background-color: #202020;
@@ -92,7 +88,6 @@ header h1 {
   opacity: 0.7;
   padding: 30%;
   position: absolute;
-  user-select: none;
 }
 .carousel-control_style {
   background-color: #ffffff;
@@ -264,9 +259,13 @@ header .btnOrange {
 /*--------about us--------*/
 #aboutUs {
   margin: 7% 0;
-}
-#aboutUs {
   font-family: "Source Sans Pro";
+}
+#aboutUs a {
+  color: #fff;
+}
+#aboutUs a:hover {
+  text-decoration: none;
 }
 #aboutUs h2 {
   color: #6a6a6a;
@@ -279,6 +278,7 @@ header .btnOrange {
   line-height: 29px;
 }
 #aboutUs button {
+  letter-spacing: 0.12px;
   border: unset;
   background-color: #e74c3c;
   box-shadow: unset;
